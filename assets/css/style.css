@@ -1,0 +1,55 @@
+		*{
+ margin : 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+    margin: 40px;
+}
+
+h1 {
+	font-family: sans-serif;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link {
+	color: black;
+}
+
+a:hover {
+	color: blue
+}
+
+summary:hover {
+	color: darkgray;
+}
+
+summary {
+	list-style-type: none;
+}
+
+table {
+  width: 500px;
+  margin-top: 10px;
+}
+
+table, tr, td, th {
+  border: 1px solid none;
+  border-collapse: collapse;
+  padding-top: 15px;
+}
+
+img	{
+	width: 100px;
+	float: right;
+}
+
+img:hover{
+	width: 400px;
+}
+
