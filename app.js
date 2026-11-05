@@ -127,6 +127,12 @@
               img.loading = 'lazy';
               img.decoding = 'async';
               b.appendChild(img);
+              if (im.caption) {
+                var tc = el('span', 'tc');
+                tc.appendChild(el('span', 'ko', t(im.caption, 'ko')));
+                tc.appendChild(el('span', 'en', t(im.caption, 'en')));
+                b.appendChild(tc);
+              }
               b.addEventListener('click', function () { openBox(imgs, i, b); });
               g.appendChild(b);
             });
