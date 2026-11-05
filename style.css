@@ -17,17 +17,32 @@ html[lang="ko"] .en, html[lang="en"] .ko { display:none; }
 .lang button { font:inherit; color:var(--muted); background:none; border:0; padding:0 2px; cursor:pointer; }
 .lang button[aria-pressed="true"] { color:var(--fg); text-decoration:underline; text-underline-offset:4px; }
 
-main { padding:40px var(--pad) 160px; max-width:1000px; margin:0 auto; }
-.entry { margin-bottom:140px; }
+main { padding:32px var(--pad) 160px; max-width:1400px; margin:0 auto; }
+.entry { margin-bottom:72px; }
 .entry-head { font-size:14px; font-weight:400; margin:0 0 4px; }
-.credits { margin:0 0 8px; color:var(--muted); }
+.credits { margin:0 0 4px; color:var(--muted); }
 .credits p { margin:0; }
-figure { margin:48px 0 0; }
-figure img { display:block; max-width:100%; max-height:85vh; width:auto; height:auto; }
-figcaption { margin-top:10px; font-size:12px; color:var(--muted); max-width:70ch; }
+
+/* small thumbnails, many per screen */
+.grid { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+.thumb { padding:0; border:0; background:#eee; cursor:zoom-in; height:150px; min-width:100px; }
+.thumb img { display:block; height:100%; width:auto; }
+
+/* enlarged view */
+.lightbox { position:fixed; inset:0; z-index:20; display:none; flex-direction:column; align-items:center; justify-content:center;
+  gap:12px; padding:56px 64px 24px; background:rgba(255,255,255,.97); }
+.lightbox.open { display:flex; }
+.lightbox img { max-width:100%; max-height:calc(100vh - 150px); width:auto; height:auto; display:block; }
+.lightbox .cap { font-size:12px; color:var(--muted); max-width:80ch; text-align:center; min-height:2.6em; }
+.lightbox button { position:absolute; font:inherit; background:none; border:0; cursor:pointer; color:var(--fg); padding:12px; }
+.lightbox .close { top:8px; right:12px; }
+.lightbox .prev, .lightbox .next { top:50%; transform:translateY(-50%); font-size:20px; }
+.lightbox .prev { left:4px; }
+.lightbox .next { right:4px; }
+body.locked { overflow:hidden; }
 
 .info section { margin-bottom:48px; max-width:70ch; }
 .info h2 { font-size:14px; font-weight:600; margin:0 0 8px; }
 .info p { margin:0 0 8px; }
 
-@media (max-width:600px) { :root { --pad:16px; } figure { margin-top:32px; } .entry { margin-bottom:96px; } }
+@media (max-width:600px) { :root { --pad:16px; } .thumb { height:110px; min-width:70px; } .lightbox { padding:56px 12px 16px; } .lightbox .prev, .lightbox .next { top:auto; bottom:4px; transform:none; } }
