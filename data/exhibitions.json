@@ -12,18 +12,15 @@
       ],
       "images": [
         {
-          "src": "assets/placeholder.svg",
+          "src": "assets/2026-12-work-01.jpg",
           "caption": {
             "ko": "전경; 2026; 장소, 서울; 사진: 이름",
             "en": "installation view; 2026; Venue, Seoul; photo: Name"
           }
         },
         {
-          "src": "assets/placeholder.svg",
-          "caption": {
-            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
-            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
-          }
+          "src": "assets/2026-12-install-02.jpg",
+          "caption": { "ko": "...", "en": "..." }
         }
       ]
     }
