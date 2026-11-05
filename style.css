@@ -27,7 +27,7 @@ main { padding:32px var(--pad) 160px; max-width:1400px; margin:0 auto; }
 .grid { display:flex; flex-wrap:wrap; align-items:flex-start; gap:8px 8px; margin-top:16px; }
 .thumb { padding:0; border:0; background:none; cursor:zoom-in; text-align:left; font:inherit; }
 .thumb img { display:block; height:150px; width:auto; }
-.thumb .tc { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden;
+.thumb .tc { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:none; overflow:hidden;
   width:0; min-width:100%; margin-top:6px; font-size:11px; line-height:1.4; color:var(--muted); overflow-wrap:anywhere; }
 
 /* enlarged view */
