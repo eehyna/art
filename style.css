@@ -25,7 +25,7 @@ main { padding:32px var(--pad) 160px; max-width:1400px; margin:0 auto; }
 
 /* small thumbnails, many per screen */
 .grid { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
-.thumb { padding:0; border:0; background:#eee; cursor:zoom-in; height:150px; min-width:100px; }
+.thumb { padding:0; border:0; background:#eee; cursor:zoom-in; height:150px; min-width:90px; }
 .thumb img { display:block; height:100%; width:auto; }
 
 /* enlarged view */
