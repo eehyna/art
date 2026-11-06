@@ -56,22 +56,32 @@
   var bClose = el('button', 'close', '✕'); bClose.type = 'button'; bClose.setAttribute('aria-label', 'close');
   var bPrev = el('button', 'prev', '‹'); bPrev.type = 'button'; bPrev.setAttribute('aria-label', 'previous');
   var bNext = el('button', 'next', '›'); bNext.type = 'button'; bNext.setAttribute('aria-label', 'next');
-  [bClose, bPrev, bNext, bigImg, cap].forEach(function (n) { box.appendChild(n); });
+  var tbox = el('div', 'tbox'); tbox.tabIndex = 0; tbox.hidden = true;
+  [bClose, bPrev, bNext, bigImg, tbox, cap].forEach(function (n) { box.appendChild(n); });
   document.body.appendChild(box);
 
   var cur = [], idx = 0, opener = null;
   function show(i) {
     idx = (i + cur.length) % cur.length;
     var im = cur[idx];
-    bigImg.src = im.src;
-    bigImg.alt = t(im.caption, 'en') || t(im.caption, 'ko');
+    var isText = im.type === 'text';
+    bigImg.hidden = isText;
+    tbox.hidden = !isText;
+    tbox.textContent = '';
     cap.textContent = '';
+    if (isText) {
+      if (im.title) tbox.appendChild(bi('h3', t(im.title, 'ko'), t(im.title, 'en')));
+      tbox.appendChild(bi('div', t(im.body, 'ko'), t(im.body, 'en')));
+      tbox.scrollTop = 0;
+    } else {
+      bigImg.src = im.src;
+      bigImg.alt = t(im.caption, 'en') || t(im.caption, 'ko');
+    }
     if (im.caption) {
       cap.appendChild(el('span', 'ko', t(im.caption, 'ko')));
       cap.appendChild(el('span', 'en', t(im.caption, 'en')));
     }
-    var one = cur.length < 2;
-    bPrev.hidden = bNext.hidden = one;
+    bPrev.hidden = bNext.hidden = cur.length < 2;
   }
   function openBox(list, i, from) {
     cur = list; opener = from;
@@ -121,17 +131,29 @@
             imgs.forEach(function (im, i) {
               var b = el('button', 'thumb');
               b.type = 'button';
-              var img = el('img');
-              img.src = im.thumb || im.src;
-              img.alt = t(im.caption, 'en') || t(im.caption, 'ko');
-              img.loading = 'lazy';
-              img.decoding = 'async';
-              b.appendChild(img);
-              if (im.caption) {
-                var tc = el('span', 'tc');
-                tc.appendChild(el('span', 'ko', t(im.caption, 'ko')));
-                tc.appendChild(el('span', 'en', t(im.caption, 'en')));
-                b.appendChild(tc);
+              if (im.type === 'text') {
+                b.classList.add('text-thumb');
+                if (im.title) {
+                  var ttl = bi('strong', t(im.title, 'ko'), t(im.title, 'en'));
+                  ttl.className = 'tt';
+                  b.appendChild(ttl);
+                }
+                var pv = bi('span', t(im.body, 'ko'), t(im.body, 'en'));
+                pv.className = 'tp';
+                b.appendChild(pv);
+              } else {
+                var img = el('img');
+                img.src = im.thumb || im.src;
+                img.alt = t(im.caption, 'en') || t(im.caption, 'ko');
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                b.appendChild(img);
+                if (im.caption) {
+                  var tc = el('span', 'tc');
+                  tc.appendChild(el('span', 'ko', t(im.caption, 'ko')));
+                  tc.appendChild(el('span', 'en', t(im.caption, 'en')));
+                  b.appendChild(tc);
+                }
               }
               b.addEventListener('click', function () { openBox(imgs, i, b); });
               g.appendChild(b);
