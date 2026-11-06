@@ -27,10 +27,24 @@
       ],
       "images": [
         {
+          "type": "break",
+          "label": {
+            "ko": "전경",
+            "en": "Installation views"
+          }
+        },
+        {
           "src": "assets/placeholder.svg",
           "caption": {
             "ko": "전경; 2026; 장소, 서울; 사진: 이름",
             "en": "installation view; 2026; Venue, Seoul; photo: Name"
+          }
+        },
+        {
+          "type": "break",
+          "label": {
+            "ko": "작업",
+            "en": "Works"
           }
         },
         {
