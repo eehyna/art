@@ -30,6 +30,10 @@ main { padding:32px var(--pad) 160px; max-width:1400px; margin:0 auto; }
 .thumb .tc { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden;
   width:0; min-width:100%; margin-top:6px; font-size:11px; line-height:1.4; color:var(--muted); overflow-wrap:anywhere; }
 
+/* row label: {"type":"break","label":{...}} */
+.row-label { margin:24px 0 0; font-size:12px; }
+.row-label + .grid { margin-top:8px; }
+
 /* text boxes (same slot as photos) */
 .text-thumb { width:150px; height:150px; padding:10px; border:1px solid #bbb; overflow:hidden; }
 .text-thumb .tt { display:block; margin-bottom:4px; font-size:11px; font-weight:600; line-height:1.4; }
