@@ -146,14 +146,16 @@
               b.type = 'button';
               if (im.type === 'text') {
                 b.classList.add('text-thumb');
+                var tb = el('span', 'tb');
                 if (im.title) {
                   var ttl = bi('strong', t(im.title, 'ko'), t(im.title, 'en'));
                   ttl.className = 'tt';
-                  b.appendChild(ttl);
+                  tb.appendChild(ttl);
                 }
                 var pv = bi('span', t(im.body, 'ko'), t(im.body, 'en'));
                 pv.className = 'tp';
-                b.appendChild(pv);
+                tb.appendChild(pv);
+                b.appendChild(tb);
               } else {
                 var img = el('img');
                 img.src = im.thumb || im.src;
@@ -161,12 +163,12 @@
                 img.loading = 'lazy';
                 img.decoding = 'async';
                 b.appendChild(img);
-                if (im.caption) {
-                  var tc = el('span', 'tc');
-                  tc.appendChild(el('span', 'ko', t(im.caption, 'ko')));
-                  tc.appendChild(el('span', 'en', t(im.caption, 'en')));
-                  b.appendChild(tc);
-                }
+              }
+              if (im.caption) {
+                var tc = el('span', 'tc');
+                tc.appendChild(el('span', 'ko', t(im.caption, 'ko')));
+                tc.appendChild(el('span', 'en', t(im.caption, 'en')));
+                b.appendChild(tc);
               }
               b.addEventListener('click', function () { openBox(shown, shown.indexOf(im), b); });
               g.appendChild(b);
