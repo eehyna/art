@@ -48,12 +48,43 @@
           }
         },
         {
-          "src": "assets/placeholder.svg",
+          "src": "assets/2026-12-work-3",
           "caption": {
             "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
             "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
           }
         },
+         {
+          "src": "assets/2026-12-work-4",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+         {
+          "src": "assets/2026-12-work-5",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+         {
+          "src": "assets/2026-12-work-7",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+         {
+          "src": "assets/2026-12-work-8",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+        
+        { "type": "break"}
+        
         {
           "type": "text",
           "title": {
