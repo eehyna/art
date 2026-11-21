@@ -1,8 +1,12 @@
 :root { --fg:#000; --muted:#666; --bg:#fff; --pad:24px; }
 * { box-sizing:border-box; }
+
+/* 스크롤바 숨기기 (스크롤은 그대로 됨) */
+* { scrollbar-width:none; -ms-overflow-style:none; }
+*::-webkit-scrollbar { display:none; }
 html { -webkit-text-size-adjust:100%; }
 body { margin:0; background:var(--bg); color:var(--fg);
-  font:14px/1.55 "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Helvetica Neue", Arial, sans-serif; }
+  font:14px/1.55 "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Helvetica Neue", Arial, sans-serif; /* 기본 글자 14px (크레딧 등 따로 지정 안 한 글자) - 웹 */ }
 a { color:inherit; text-decoration:none; }
 a:hover { text-decoration:underline; }
 :focus-visible { outline:2px solid var(--fg); outline-offset:3px; }
@@ -11,66 +15,67 @@ a:hover { text-decoration:underline; }
 html[lang="ko"] .en, html[lang="en"] .ko { display:none; }
 
 .site-header { position:sticky; top:0; z-index:5; display:flex; justify-content:space-between; align-items:baseline;
-  gap:16px; padding:18px var(--pad); background:var(--bg); }
+  gap:16px; padding:18px var(--pad); background:var(--bg); font-size:14px; /* 헤더 글자 (메뉴, 사이트 이름, KO/EN) - 웹 */ }
 .site-header nav { display:flex; gap:20px; align-items:baseline; }
 .site-header a[aria-current="page"] { text-decoration:underline; text-underline-offset:4px; }
-.lang button { font:inherit; color:var(--muted); background:none; border:0; padding:0 2px; cursor:pointer; }
+.lang button { font:inherit; color:var(--muted); background:none; border:0; padding:0 2px; cursor:pointer; } /* KO/EN 버튼: 헤더 글자 크기를 따라감 */
 .lang button[aria-pressed="true"] { color:var(--fg); text-decoration:underline; text-underline-offset:4px; }
 
 main { padding:32px var(--pad) 160px; max-width:1400px; margin:0 auto; }
 .entry { margin-bottom:72px; }
-.entry-head { font-size:14px; font-weight:400; margin:0 0 4px; }
+.entry-head { font-size:14px; /* 전시 제목 줄 (날짜, 장소, 전시 제목) - 웹 */ font-weight:400; margin:0 0 4px; }
 .credits { margin:0 0 4px; color:var(--muted); }
 .credits p { margin:0; }
 
 /* small thumbnails, many per screen */
 .grid { display:flex; flex-wrap:wrap; align-items:flex-start; gap:8px 8px; margin-top:16px; }
-.thumb { padding:0; border:0; background:none; cursor:zoom-in; text-align:left; font:inherit; color:var(--fg); }
+.thumb { padding:0; border:0; background:none; cursor:zoom-in; text-align:left; font:inherit; color:var(--fg); } /* 썸네일 버튼: 안쪽 글자 크기는 .tc(캡션), .tb(글 박스)가 정함 */
 .thumb img { display:block; height:150px; width:auto; }
 .thumb .tc { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden;
-  width:0; min-width:100%; margin-top:6px; font-size:11px; line-height:1.4; color:var(--muted); overflow-wrap:anywhere; }
+  width:0; min-width:100%; margin-top:6px; font-size:11px; /* 썸네일 밑 캡션 - 웹 */ line-height:1.4; color:var(--muted); overflow-wrap:anywhere; }
 
 /* row label: {"type":"break","label":{...}} */
-.row-label { margin:24px 0 0; font-size:12px; }
+.row-label { margin:24px 0 0; font-size:12px; /* 분류 이름 (전경, 작업 등) - 웹 */ }
 .row-label + .grid { margin-top:8px; }
 
 /* text boxes (same slot as photos) */
 .text-thumb { width:150px; }
-.text-thumb .tb { display:block; height:150px; overflow:hidden; font-size:11px; line-height:1.45; white-space:normal;
+.text-thumb .tb { display:block; height:150px; overflow:hidden; font-size:11px; /* 글 박스 썸네일 안의 글 - 웹 */ line-height:1.45; white-space:normal;
   -webkit-mask-image:linear-gradient(#000 80%, transparent); mask-image:linear-gradient(#000 80%, transparent); }
 .text-thumb .tt { display:block; margin-bottom:6px; font-weight:600; }
 .text-thumb .tp { color:var(--fg); }
 
 /* text in the enlarged view: scrolls */
 .lightbox [hidden] { display:none !important; }
-.tbox { width:min(70ch, 100%); max-height:calc(100vh - 150px); overflow-y:auto; padding:4px 12px 4px 0; text-align:left; font-size:14px; line-height:1.75; white-space:pre-line; }
-.tbox h3 { margin:0 0 14px; font-size:14px; font-weight:600; white-space:normal; }
+.tbox { width:min(70ch, 100%); max-height:calc(100vh - 150px); overflow-y:auto; padding:4px 12px 4px 0; text-align:left; font-size:14px; /* 확대 화면 글 본문 - 웹 */ line-height:1.75; white-space:pre-line; }
+.tbox h3 { margin:0 0 14px; font-size:14px; /* 확대 화면 글 제목 - 웹 */ font-weight:600; white-space:normal; }
 
 /* enlarged view */
 .lightbox { position:fixed; inset:0; z-index:20; display:none; flex-direction:column; align-items:center; justify-content:center;
   gap:12px; padding:56px 64px 24px; background:rgba(255,255,255,.97); }
 .lightbox.open { display:flex; }
 .lightbox img { max-width:100%; max-height:calc(100vh - 150px); width:auto; height:auto; display:block; }
-.lightbox .cap { font-size:12px; color:var(--muted); max-width:80ch; text-align:center; min-height:2.6em; }
-.lightbox button { position:absolute; font:inherit; background:none; border:0; cursor:pointer; color:var(--fg); padding:12px; }
+.lightbox .cap { font-size:12px; /* 확대 화면 사진 캡션 - 웹 */ color:var(--muted); max-width:80ch; text-align:center; min-height:2.6em; }
+.lightbox button { position:absolute; font:inherit; background:none; border:0; cursor:pointer; color:var(--fg); padding:12px; } /* 확대 화면 ✕, ‹, › 버튼: 기본 글자 크기를 따라감 */
 .lightbox .close { top:8px; right:12px; }
-.lightbox .prev, .lightbox .next { top:50%; transform:translateY(-50%); font-size:20px; }
+.lightbox .prev, .lightbox .next { top:50%; transform:translateY(-50%); font-size:20px; /* 확대 화면 좌우 화살표 크기 - 웹 */ }
 .lightbox .prev { left:4px; }
 .lightbox .next { right:4px; }
 body.locked { overflow:hidden; }
 
+.info { font-size:14px; /* 소개 페이지 내용 - 웹 */ }
 .info section { margin-bottom:48px; max-width:70ch; }
-.info h2 { font-size:14px; font-weight:600; margin:0 0 8px; }
+.info h2 { font-size:inherit; /* 소개 페이지 소제목 (.info 크기를 따라감) - 웹 */ font-weight:600; margin:0 0 8px; }
 .info p { margin:0 0 8px; }
 
 @media (max-width:600px) {
-  :root { --pad:16px; --mpad:4px; }   /* --pad: 헤더 좌우 여백, --mpad: 메인(전시 내용) 좌우 여백 */
+  :root { --pad:16px; --mpad:8px; }   /* --pad: 헤더 좌우 여백, --mpad: 메인(전시 내용) 좌우 여백 */
 
   main { padding-left:var(--mpad); padding-right:var(--mpad); }
 
   /* 사진 줄: 한 줄 가로 스크롤 */
   .grid {
-    --per:5;           /* 화면에 보이는 사진 수 (작을수록 사진이 커짐) */
+    --per:4.3;           /* 화면에 보이는 사진 수 (작을수록 사진이 커짐) */
     --gap:2px;           /* 사진 사이 간격 */
     --tw:calc((100vw - 2 * var(--mpad) - (var(--per) - 1) * var(--gap)) / var(--per));
     gap:var(--gap);
@@ -78,7 +83,7 @@ body.locked { overflow:hidden; }
     overflow-x:auto;
     align-items:flex-start;
     padding-bottom:10px;
-    margin-top:2px;     /* 줄과 줄 사이 (분류 이름이 없을 때) */
+    margin-top:12px;     /* 줄과 줄 사이 (분류 이름이 없을 때) */
     -webkit-overflow-scrolling:touch;
   }
   .thumb { flex:none; width:var(--tw); min-width:0; max-width:none; height:auto; }
@@ -86,20 +91,21 @@ body.locked { overflow:hidden; }
   .text-thumb .tb { height:var(--tw); }
 
   /* 간격 */
-  .row-label { margin-top:1px; }              /* 분류 이름 위 */
-  .row-label + .grid { margin-top:1px; }       /* 분류 이름과 사진 줄 사이 */
-  .entry { margin-bottom:5px; }               /* 전시와 전시 사이 */
+  .row-label { margin-top:16px; }              /* 분류 이름 위 */
+  .row-label + .grid { margin-top:6px; }       /* 분류 이름과 사진 줄 사이 */
+  .entry { margin-bottom:56px; }               /* 전시와 전시 사이 */
 
   /* 글자 크기 */
-  body { font-size:20px; } /* 헤더 */
-  .entry-head { font-size:10px; } /* 전시 개요 */
-  .thumb .tc { font-size:7px; } /* 사진 썸네일 캡션 */
-  .text-thumb .tb { font-size:3px; } /* 글박스 썸네일 */
-  .row-label { font-size:7px; } /* 전시 줄분류 소제목 */
-  .tbox { font-size:10px; } /* 글박스 본문 */
-  .tbox h3 { font-size:10px; } /* 글박스 제목 */
-  .lightbox .cap { font-size:10px; } /* ? */
-  .info h2 { font-size:10px; } /* ? */
+  body { font-size:12px; /* 기본 글자 (크레딧 등 따로 지정 안 한 글자) - 모바일 */ }
+  .entry-head { font-size:12px; /* 전시 제목 줄 (날짜, 장소, 전시 제목) - 모바일 */ }
+  .thumb .tc { font-size:10px; /* 썸네일 밑 캡션 - 모바일 */ }
+  .text-thumb .tb { font-size:10px; /* 글 박스 썸네일 안의 글 - 모바일 */ }
+  .row-label { font-size:11px; /* 분류 이름 (전경, 작업 등) - 모바일 */ }
+  .tbox { font-size:13px; /* 확대 화면 글 본문 - 모바일 */ }
+  .tbox h3 { font-size:13px; /* 확대 화면 글 제목 - 모바일 */ }
+  .lightbox .cap { font-size:11px; /* 확대 화면 사진 캡션 - 모바일 */ }
+  .site-header { font-size:12px; /* 헤더 글자 (메뉴, 사이트 이름, KO/EN) - 모바일 */ }
+  .info { font-size:12px; /* 소개 페이지 내용 - 모바일 */ }
 
   /* 확대 화면 */
   .lightbox { padding:56px 12px 16px; }
