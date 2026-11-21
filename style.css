@@ -25,7 +25,7 @@ main { padding:32px var(--pad) 160px; max-width:1400px; margin:0 auto; }
 
 /* small thumbnails, many per screen */
 .grid { display:flex; flex-wrap:wrap; align-items:flex-start; gap:8px 8px; margin-top:16px; }
-.thumb { padding:0; border:0; background:none; cursor:zoom-in; text-align:left; font:inherit; }
+.thumb { padding:0; border:0; background:none; cursor:zoom-in; text-align:left; font:inherit; color:var(--fg); }
 .thumb img { display:block; height:150px; width:auto; }
 .thumb .tc { display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; overflow:hidden;
   width:0; min-width:100%; margin-top:6px; font-size:11px; line-height:1.4; color:var(--muted); overflow-wrap:anywhere; }
@@ -64,13 +64,15 @@ body.locked { overflow:hidden; }
 .info p { margin:0 0 8px; }
 
 @media (max-width:600px) {
-  :root { --pad:16px; }
+  :root { --pad:16px; --mpad:8px; }   /* --pad: 헤더 좌우 여백, --mpad: 메인(전시 내용) 좌우 여백 */
+
+  main { padding-left:var(--mpad); padding-right:var(--mpad); }
 
   /* 사진 줄: 한 줄 가로 스크롤 */
   .grid {
     --per:4.3;           /* 화면에 보이는 사진 수 (작을수록 사진이 커짐) */
     --gap:2px;           /* 사진 사이 간격 */
-    --tw:calc((100vw - 2 * var(--pad) - (var(--per) - 1) * var(--gap)) / var(--per));
+    --tw:calc((100vw - 2 * var(--mpad) - (var(--per) - 1) * var(--gap)) / var(--per));
     gap:var(--gap);
     flex-wrap:nowrap;
     overflow-x:auto;
