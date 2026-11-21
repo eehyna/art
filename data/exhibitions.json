@@ -82,9 +82,9 @@
             "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
           }
         },
-        
-        { "type": "break"}
-        
+        { 
+          "type": "break"
+        },
         {
           "type": "text",
           "title": {
