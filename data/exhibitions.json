@@ -7,7 +7,6 @@
   "city": { "ko": "서울, 한국", "en": "Seoul, Korea" },
   "kind": { "ko": "개인전", "en": "solo exhibition" },
   "title": { "ko": "전시 제목", "en": "Exhibition title" },
-  "credits": [{ "ko": "사진: 이름", "en": "photo: Name" }],
   "images": [  
         {
           "src": "assets/2024-12-install-1.jpg",
@@ -81,12 +80,6 @@
         "ko": "전시 제목",
         "en": "Exhibition title"
       },
-      "credits": [
-        {
-          "ko": "사진: 이름",
-          "en": "photo: Name"
-        }
-      ],
       "images": [
         {
           "type": "break",
