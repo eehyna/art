@@ -110,4 +110,94 @@
       ]
     }
   ]
+},
+{
+  "exhibitions": [
+    {
+      "id": "sample-2026-12",
+      "date": "2024-12-3",
+      "venue": {
+        "ko": "장소 이름",
+        "en": "Venue name"
+      },
+      "city": {
+        "ko": "서울, 한국",
+        "en": "Seoul, Korea"
+      },
+      "kind": {
+        "ko": "개인전",
+        "en": "solo exhibition"
+      },
+      "title": {
+        "ko": "오해를 복제하기 주의를 기울여서 계속",
+        "en": "Exhibition title"
+      },
+      "credits": [
+        {
+          "ko": "사진: 이름",
+          "en": "photo: Name"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/2024-12-install-1.jpg",
+          "caption": {
+            "ko": "전경; 2026; 장소, 서울; 사진: 고정균",
+            "en": "installation view; 2026; Venue, Seoul; photo: Name"
+          }
+        },
+        {
+          "src": "assets/2024-12-work-1.jpg",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+         {
+          "src": "assets/2024-12-work-2.jpg",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+         {
+          "src": "assets/2024-12-work-3.jpg",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+        {
+          "src": "assets/2024-12-work-4.jpg",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+         {
+          "src": "assets/2026-12-work-5.JPG",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+        {
+          "type": "text",
+          "title": {
+            "ko": "오해를 복제하기 주의를 기울여서 계속",
+            "en": "..."
+          },
+          "body": {
+            "ko": "우리가 서로를 이해하고 있다고 느끼는 감각은 어쩌면 오해를 정교하게 조각해 가는 일에 불과할지도 모른다. 우리는 얼마나 많은 착각 속에서 새로운 오해를 만들어가고 있을까? 상대방의 말과 표정, 신체의 움직임을 읽어내며 진정한 소통을 이루고 있다고 믿지만 그 안에는 언제나 미세한 유격이 존재한다. \n\n 나는 복제 기술을 통해 신체의 변형된 이미지를 조각과 설치로 재구성한다. 재료와 행위가 관계하며 변화하는 현상들을 관찰하고 사유한다. 복제는 원본을 정확히 재현하려는 시도이지만 그 과정에서 피할 수 없는 틈이 발생한다. 이 필연은 복제의 본질과 한계를 드러내는 모순적 특징이다. 원본과 닮았지만 미묘하게 어긋나는 그 틈은 마치 인간 사이의 소통에서 피할 수 없이 발생하는 오해처럼 느껴진다. 우리는 언어와 신체를 통해 서로를 이해하려 하지만 그 과정에서 발생하는 미세한 어긋남과 왜곡은 결코 완벽히 메워지지 않는다. 이 틈은 우리가 서로에게 다가가려 할수록 더 선명해지며 이해의 한계를 자각하게 한다. \n\n나는 이 한계를 미워하지 않고 탐구한다. 틈과 오차, 유격과 오해, 그리고 그 불완전함에 매력을 느낀다. 재료의 가변성과 역동성을 관찰하며 재료가 일시적으로 연약한 상태에 놓이는 그 순간들을 포착해 완성의 형태로 끌어낸다. 과정 중 나타나는 불완전하고 일시적인 모습들이야말로 나에게는 작업의 목적인 것이다. \n\n 더듬으며 내가 떠나온 것들을 생각한다. 이제까지 나는 무엇이 되고자 떠나기를 반복했지만 사실 그 떠남조차 되지 못한 나를 기다리는 행위에 불과했는지도 모른다. 언제까지 오지 않는 무언가를 기다리는 기분으로 살아가야 하는 것일까? 이 세상에서 내가 온전히 이해되길 기대하는 일도 어쩌면 끊임없이 어긋나는 일일지도 모른다. 이제 더 이상 어디론가 갈 필요도 다른 무언가가 될 필요도 없이 지금 이 자리에서 나를 지키며 살아가고 싶다. 내가 지키려는 이 자리와 순간들은 단순히 완성을 기다리는 예비 상태가 아니다. 이곳에서 나는 오해와 유격을 사랑한다. 그리하여 나는 이해되지 않는 채로 비로소 자유로히 존재한다.",
+            "en": "Write your text here.\n\nA blank line starts a new paragraph."
+          },
+          "caption": {
+            "ko": "작가 노트",
+            "en": "artist's note"
+          }
+        }
+      ]
+    }
+  ]
 }
+
