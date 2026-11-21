@@ -16,8 +16,16 @@
             "en": "installation view; 2026; Venue, Seoul; photo: Name"
           }
         },
+        {  "type": "break"  },
         {
           "src": "assets/2024-12-work-1.jpg",
+          "caption": {
+            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
+            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
+          }
+        },
+         {
+          "src": "assets/2024-12-work-5.jpg",
           "caption": {
             "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
             "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
@@ -30,27 +38,14 @@
             "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
           }
         },
-         {
+        {
           "src": "assets/2024-12-work-3.jpg",
           "caption": {
             "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
             "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
           }
         },
-        {
-          "src": "assets/2024-12-work-4.jpg",
-          "caption": {
-            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
-            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
-          }
-        },
-         {
-          "src": "assets/2026-12-work-5.JPG",
-          "caption": {
-            "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
-            "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
-          }
-        },
+    
         {
           "type": "text",
           "title": {
