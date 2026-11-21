@@ -2,7 +2,7 @@
   "exhibitions": [
     {
   "id": "2024-12-group",
-  "date": "2024-12-3",
+  "date": "2024-12-03",
   "venue": { "ko": "장소 이름", "en": "Venue name" },
   "city": { "ko": "서울, 한국", "en": "Seoul, Korea" },
   "kind": { "ko": "개인전", "en": "solo exhibition" },
@@ -63,7 +63,7 @@
 },
 {
   "id": "2026-3-group",
-  "date": "2026-3-6",
+  "date": "2026-03-06",
   "venue": { "ko": "장소 이름", "en": "Venue name" },
   "city": { "ko": "서울, 한국", "en": "Seoul, Korea" },
   "kind": { "ko": "개인전", "en": "solo exhibition" },
@@ -117,7 +117,7 @@
             "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
             "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
           }
-        },
+        }
   ]
 },
     {
