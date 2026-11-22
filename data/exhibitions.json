@@ -117,6 +117,13 @@
             "ko": "현아이; 작품명; 2026; 재료; 크기; 작가 제공",
             "en": "Hyunai; Title; 2026; materials; dimensions; courtesy of the artist"
           }
+        },
+      {
+        "src": "assets/2026-3-install-2.jpg",
+          "caption": {
+            "ko": "전경; 2026; 장소, 서울; 작가제공",
+            "en": "installation view; 2026; Venue, Seoul; photo: Name"
+          }
         }
   ]
 },
