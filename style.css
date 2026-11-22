@@ -69,21 +69,21 @@ body.locked { overflow:hidden; }
 .info p { margin:0 0 8px; }
 
 @media (max-width:600px) {
-  :root { --pad:16px; --mpad:8px; }   /* --pad: 헤더 좌우 여백, --mpad: 메인(전시 내용) 좌우 여백 */
+  :root { --pad:16px; --mpad:2px; }   /* --pad: 헤더 좌우 여백, --mpad: 메인(전시 내용) 좌우 여백 */
 
   main { padding-left:var(--mpad); padding-right:var(--mpad); }
 
   /* 사진 줄: 한 줄 가로 스크롤 */
   .grid {
-    --per:4.3;           /* 화면에 보이는 사진 수 (작을수록 사진이 커짐) */
+    --per:5;           /* 화면에 보이는 사진 수 (작을수록 사진이 커짐) */
     --gap:2px;           /* 사진 사이 간격 */
     --tw:calc((100vw - 2 * var(--mpad) - (var(--per) - 1) * var(--gap)) / var(--per));
     gap:var(--gap);
     flex-wrap:nowrap;
     overflow-x:auto;
     align-items:flex-start;
-    padding-bottom:10px;
-    margin-top:12px;     /* 줄과 줄 사이 (분류 이름이 없을 때) */
+    padding-bottom:1px;
+    margin-top:2px;     /* 줄과 줄 사이 (분류 이름이 없을 때) */
     -webkit-overflow-scrolling:touch;
   }
   .thumb { flex:none; width:var(--tw); min-width:0; max-width:none; height:auto; }
@@ -91,21 +91,21 @@ body.locked { overflow:hidden; }
   .text-thumb .tb { height:var(--tw); }
 
   /* 간격 */
-  .row-label { margin-top:16px; }              /* 분류 이름 위 */
-  .row-label + .grid { margin-top:6px; }       /* 분류 이름과 사진 줄 사이 */
-  .entry { margin-bottom:56px; }               /* 전시와 전시 사이 */
+  .row-label { margin-top:5px; }              /* 분류 이름 위 */
+  .row-label + .grid { margin-top:1px; }       /* 분류 이름과 사진 줄 사이 */
+  .entry { margin-bottom:16px; }               /* 전시와 전시 사이 */
 
   /* 글자 크기 */
   body { font-size:12px; /* 기본 글자 (크레딧 등 따로 지정 안 한 글자) - 모바일 */ }
-  .entry-head { font-size:12px; /* 전시 제목 줄 (날짜, 장소, 전시 제목) - 모바일 */ }
-  .thumb .tc { font-size:10px; /* 썸네일 밑 캡션 - 모바일 */ }
-  .text-thumb .tb { font-size:10px; /* 글 박스 썸네일 안의 글 - 모바일 */ }
-  .row-label { font-size:11px; /* 분류 이름 (전경, 작업 등) - 모바일 */ }
-  .tbox { font-size:13px; /* 확대 화면 글 본문 - 모바일 */ }
-  .tbox h3 { font-size:13px; /* 확대 화면 글 제목 - 모바일 */ }
-  .lightbox .cap { font-size:11px; /* 확대 화면 사진 캡션 - 모바일 */ }
-  .site-header { font-size:12px; /* 헤더 글자 (메뉴, 사이트 이름, KO/EN) - 모바일 */ }
-  .info { font-size:12px; /* 소개 페이지 내용 - 모바일 */ }
+  .entry-head { font-size:9px; /* 전시 제목 줄 (날짜, 장소, 전시 제목) - 모바일 */ }
+  .thumb .tc { font-size:6px; /* 썸네일 밑 캡션 - 모바일 */ }
+  .text-thumb .tb { font-size:2px; /* 글 박스 썸네일 안의 글 - 모바일 */ }
+  .row-label { font-size:6px; /* 분류 이름 (전경, 작업 등) - 모바일 */ }
+  .tbox { font-size:11px; /* 확대 화면 글 본문 - 모바일 */ }
+  .tbox h3 { font-size:10px; /* 확대 화면 글 제목 - 모바일 */ }
+  .lightbox .cap { font-size:9px; /* 확대 화면 사진 캡션 - 모바일 */ }
+  .site-header { font-size:18px; /* 헤더 글자 (메뉴, 사이트 이름, KO/EN) - 모바일 */ }
+  .info { font-size:9px; /* 소개 페이지 내용 - 모바일 */ }
 
   /* 확대 화면 */
   .lightbox { padding:56px 12px 16px; }
